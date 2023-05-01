@@ -14,7 +14,7 @@ from the Shipping Label and only references by the shipping address
 On shipping address delete, address references will be mantained for analytics
 
 ```elixir
-Coinable.Store.CustomerOrder do
+defmodule Coinable.Store.CustomerOrder do
     use Ecto.Schema
     schema "store_orders" do
         ...
@@ -23,7 +23,7 @@ Coinable.Store.CustomerOrder do
     end
 end
 
-Coinable.Store.ShippingAddress do
+defmodule Coinable.Store.ShippingAddress do
     use Ecto.Schema
     schema "shipping_addresses" do
         ...
@@ -34,7 +34,7 @@ Coinable.Store.ShippingAddress do
     end
 end
 
-Coinable.Store.ShippingLabel do
+defmodule Coinable.Store.ShippingLabel do
     use Ecto.Schema
     schema "shipping_labels" do
         ...
@@ -50,7 +50,7 @@ Coinable.Store.ShippingLabel do
     end
 end
 
-Coinable.Store.FulFillment do
+defmodule Coinable.Store.FulFillment do
     use Ecto.Schema
     schema "store_fulfillment" do
         ...
@@ -63,7 +63,7 @@ end
 ```
 
 ```elixir
-Coinable.Store do
+defmodule Coinable.Store do
     ...
     @spec list_stale_addresses(fields_query, opts) :: list_of_shipping_address
     @spec delete_shipping_address(Coinable.Store.ShippingAddress.t()) :: {:ok, Coinable.Store.ShippingAddress.t()} | {:error, term}
