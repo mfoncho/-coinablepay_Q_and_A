@@ -1,8 +1,8 @@
 ### Store Order 
 
 #### Assumptions
-- Backend api is REST
-- Backend api is versioned
+- Backend API is REST
+- Backend API is versioned
 - Backend team has a documention structure
 - Development team is familiar with version control git or mercurial
 - Backend library used is Elixir Phoenix
@@ -11,7 +11,7 @@
 - Frontend is developed with npm workspaces
     - website built with nextjs package
     - UI components seperate package with storybooks integration
-    - site client package (http client used for website api request like placing orders)
+    - site client package (http client used for website API request like placing orders)
     - store client package (http client used for store dashboard)
 
 - Order dashboard is built with React project like Nextjs used in frontend
@@ -20,7 +20,7 @@
 - Discuss Business logic and constraints like referals and coupons etc.
 - Discuss lagal constraints like GDPR and data retension policies
 - Select ui wireframe
-- Develope Api boundries specs for
+- Develope API boundries specs for
     - Context app and Phoenix app
     - Phoenix app and http clients
     - http clients and ui components
@@ -32,19 +32,19 @@
 
 - Implement Mechant orders dashboard API
     - Add Route, Controller and Views for mechant orders
-    - Test and fuzz dashboard backend rest Api
+    - Test and fuzz dashboard backend rest API
     - Add `async` getter methods for the Mechant's dashboard store orders in the store http client
     - Test mechant dashboard store http client
-    - Test client against the backend api
-    - Tag stable release with api version
+    - Test client against the backend API
+    - Tag stable release with API version
 
 - Implement Customer orders API
     - Add Route, Controller and Views for customer orders
-    - Test and fuzz customer orders backend rest Api
+    - Test and fuzz customer orders backend rest API
     - Implement `async` methods to place and view orders for Customer in the site http client
     - Test site http client
-    - Test client against the backend api
-    - Tag stable release with api version
+    - Test client against the backend API
+    - Tag stable release with API version
 
 - Select Ordering UI with customer input area
     - Implement ui components
