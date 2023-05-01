@@ -15,7 +15,7 @@
 string_type_name is ....
 """
 @type string_type_name :: String.t()
-@spec create_user_wallet(string_type_name) :: {:ok, WalletUser.t()}
+@spec create_wallet_user(string_type_name) :: {:ok, WalletUser.t()}
 ```
 
 Instead the function spec should be named appropriatly to reflect what the
