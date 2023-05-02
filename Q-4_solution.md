@@ -22,7 +22,7 @@ defmodule Coinable.Mailer do
     @spec send_mail(mail) :: {:ok, uuid}
     def send_mail(%Coinable.Mailer.Mail{}=mail, opts \\ []) do
         adapter = 
-            Application.get_env(:coinable, mailer)
+            Application.get_env(:coinable, :mailer)
             |> Keyword.fetch!(:adapter)
         Kernel.apply(adapter, :send, [mail, opts])
     end
