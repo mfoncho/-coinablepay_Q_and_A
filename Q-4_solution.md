@@ -34,7 +34,7 @@ end
 Implement adapters to be used while testing application
 
 ```elixir
-defmodule Coinable.Mailer.Interceptor
+defmodule Coinable.Mailer.Interceptor do
     @behaviour Coinable.Mailer
     # Intercepts mails and used to test application
 
@@ -48,7 +48,7 @@ end
 Implement adapters for 3rd party service
 
 ```elixir
-defmodule Coinable.Mailer.Sendgrid
+defmodule Coinable.Mailer.Sendgrid do
     @behaviour Coinable.Mailer
     def send(%Coinable.Mailer.Mail{}=mail, opts \\ []) do
         # Send mail with sendgrid api
