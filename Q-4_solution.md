@@ -10,7 +10,7 @@ common API for use in application
 
 ```elixir
 
-Coinable.Mailer do
+defmodule Coinable.Mailer do
     @type mail :: Coinable.Mailer.Mail.t()
     @type opts :: list()
     @type uuid :: binary()
@@ -34,7 +34,7 @@ end
 Implement adapters to be used while testing application
 
 ```elixir
-Coinable.Mailer.Interceptor
+defmodule Coinable.Mailer.Interceptor
     @behaviour Coinable.Mailer
     # Intercepts mails and used to test application
 
@@ -48,7 +48,7 @@ end
 Implement adapters for 3rd party service
 
 ```elixir
-Coinable.Mailer.Sendgrid
+defmodule Coinable.Mailer.Sendgrid
     @behaviour Coinable.Mailer
     def send(%Coinable.Mailer.Mail{}=mail, opts \\ []) do
         # Send mail with sendgrid api
@@ -61,7 +61,7 @@ end
 ##### Integration
 Implement integrate to application
 ```elixir
-Coinable.Accounts do
+defmodule Coinable.Accounts do
     @type uuid :: binary()
 
     @spec welcome_user(WalletUser.t()) :: {:ok, uuid}
